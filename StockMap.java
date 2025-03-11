@@ -6,9 +6,7 @@ import java.util.*;
 
 public class StockMap
 {
-
-
-
+   private Map<String, Stock> stockMap;
    
    /**
       Constructor
@@ -16,7 +14,7 @@ public class StockMap
    
    public StockMap()
    {
-
+      stockMap = new HashMap<>();
    }
    
    /**
@@ -29,6 +27,7 @@ public class StockMap
    {
       // Put a mapping into the map. The stock
       // symbol is the key.
+      stockMap.put(stock.getSymbol(), stock);
 
    }
    
@@ -42,6 +41,6 @@ public class StockMap
    
    public Stock getStock(String symbol)
    {
-
+      return stockMap.get(symbol);
    }
 }
